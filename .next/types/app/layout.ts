@@ -1,8 +1,16 @@
+<<<<<<< HEAD
 // File: C:\website\ngo\aroehan-nextjs-v3\aroehan\app\layout.tsx
 import * as entry from '../../../app/layout.js'
 import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
 
 type TEntry = typeof import('../../../app/layout.js')
+=======
+// File: C:\website\ngo\aroehan-nextjs-v3\aroehan\src\app\layout.tsx
+import * as entry from '../../../src/app/layout.js'
+import type { ResolvingMetadata, ResolvingViewport } from 'next/dist/lib/metadata/types/metadata-interface.js'
+
+type TEntry = typeof import('../../../src/app/layout.js')
+>>>>>>> 15a7e7aeedc692748f9f67f6e6b3f1c63fd93b9d
 
 type SegmentParams<T extends Object = any> = T extends Record<string, any>
   ? { [K in keyof T]: T[K] extends string ? string | string[] | undefined : never }
