@@ -21,9 +21,8 @@ const STORIES = [
   {
     title: "From drought to abundance: How Savita transformed her village's water crisis",
     category: "Water Conservation",
-    date: "January 2024" ,
+    date: "January 2024",
     excerpt: "In a village that once walked kilometres for water, Savita and her women's group led the construction of a check dam that now sustains 300 families year-round."
-  
   },
   {
     title: "First in her family to complete Class 10: Rekha's education journey",
