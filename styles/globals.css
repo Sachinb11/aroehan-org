@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&family=DM+Mono:wght@400;500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --font-display: 'Playfair Display';
+  --font-body:    'DM Sans';
+  --font-mono:    'DM Mono';
+  --brand:        #f97316;
+  --navy:         #1e2a40;
+}
+
+@layer base {
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    font-family: var(--font-body), system-ui, sans-serif;
+    background-color: #ffffff;
+    color: #1f2937;
+    line-height: 1.65;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display), Georgia, serif;
+    color: #111827;
+    line-height: 1.2;
+  }
+
+  a, button, [role="button"], select, label[for] { cursor: pointer; }
+
+  ::selection { background: #fed7aa; color: #7c3810; }
+
+  :focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+    border-radius: 4px;
+  }
+}
+
+@layer components {
+
+  /* ── Buttons ─────────────────────────── */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2
+           bg-brand-500 text-white
+           px-6 py-3 rounded-xl
+           font-body font-semibold text-sm
+           shadow-btn
+           transition-all duration-200
+           hover:bg-brand-600 hover:shadow-btn-lg hover:-translate-y-px
+           active:translate-y-0
+           focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-brand-500 text-brand-600
+           px-6 py-3 rounded-xl
+           font-body font-semibold text-sm
+           transition-all duration-200
+           hover:bg-brand-50 hover:border-brand-600 hover:-translate-y-px
+           active:translate-y-0
+           focus-visible:ring-2 focus-visible:ring-brand-500 focus-visible:ring-offset-2;
+  }
+
+  .btn-navy {
+    @apply inline-flex items-center justify-center gap-2
+           bg-navy-900 text-white
+           px-6 py-3 rounded-xl
+           font-body font-semibold text-sm
+           transition-all duration-200
+           hover:bg-navy-800 hover:-translate-y-px hover:shadow-md
+           active:translate-y-0;
+  }
+
+  .btn-white {
+    @apply inline-flex items-center justify-center gap-2
+           bg-white text-navy-900
+           px-6 py-3 rounded-xl
+           font-body font-semibold text-sm
+           shadow-sm
+           transition-all duration-200
+           hover:bg-gray-50 hover:shadow-md hover:-translate-y-px;
+  }
+
+  .btn-outline-white {
+    @apply inline-flex items-center justify-center gap-2
+           border-2 border-white/70 text-white
+           px-6 py-3 rounded-xl
+           font-body font-semibold text-sm
+           backdrop-blur-sm
+           transition-all duration-200
+           hover:bg-white/15 hover:border-white;
+  }
+
+  /* ── Cards ───────────────────────────── */
+  .card {
+    @apply bg-white border border-gray-100 rounded-2xl shadow-card
+           transition-all duration-300
+           hover:shadow-card-md hover:-translate-y-1;
+  }
+
+  /* ── Tags / Labels ───────────────────── */
+  .tag {
+    @apply inline-flex items-center gap-1.5
+           text-xs font-mono font-medium tracking-[0.12em] uppercase
+           text-brand-600 bg-brand-50 border border-brand-100
+           px-3 py-1 rounded-full;
+  }
+
+  .tag-light {
+    @apply inline-flex items-center gap-1.5
+           text-xs font-mono font-medium tracking-[0.12em] uppercase
+           text-brand-200 bg-white/10 border border-white/20
+           px-3 py-1 rounded-full;
+  }
+
+  /* ── Section typography ──────────────── */
+  .section-title {
+    @apply font-display font-bold text-navy-950
+           text-3xl md:text-4xl lg:text-5xl
+           leading-tight tracking-tight;
+  }
+
+  /* ── Form inputs ─────────────────────── */
+  .input {
+    @apply w-full px-4 py-3
+           border border-gray-200 rounded-xl
+           bg-white text-gray-900 placeholder-gray-400
+           text-sm font-body
+           transition-all duration-150
+           focus:outline-none focus:ring-2 focus:ring-brand-500 focus:border-transparent
+           hover:border-gray-300;
+  }
+
+  /* ── Nav link ────────────────────────── */
+  .nav-link {
+    @apply text-sm font-body font-medium
+           transition-colors duration-200;
+  }
+}
+
+@layer utilities {
+  .text-balance { text-wrap: balance; }
+
+  .animate-delay-100 { animation-delay: 100ms; }
+  .animate-delay-200 { animation-delay: 200ms; }
+  .animate-delay-300 { animation-delay: 300ms; }
+  .animate-delay-400 { animation-delay: 400ms; }
+
+  /* Hero overlay — navy tinted, shows image clearly */
+  .hero-overlay {
+    background: linear-gradient(
+      110deg,
+      rgba(17, 24, 39, 0.82) 0%,
+      rgba(30, 42, 64, 0.65) 55%,
+      rgba(30, 42, 64, 0.25) 100%
+    );
+  }
+
+  .gradient-brand {
+    background: linear-gradient(135deg, #f97316 0%, #c2530a 100%);
+  }
+
+  .gradient-navy {
+    background: linear-gradient(135deg, #1e2a40 0%, #111827 100%);
+  }
+
+  .gradient-light {
+    background: linear-gradient(135deg, #fff8f0 0%, #ffffff 60%, #f9fafb 100%);
+  }
+
+  .text-shadow {
+    text-shadow: 0 2px 16px rgba(0,0,0,0.45);
+  }
+
+  .text-shadow-sm {
+    text-shadow: 0 1px 6px rgba(0,0,0,0.25);
+  }
+
+  .glass {
+    background: rgba(255,255,255,0.90);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+  }
+}
