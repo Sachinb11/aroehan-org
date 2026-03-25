@@ -1,0 +1,75 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './src/pages/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/components/**/*.{js,ts,jsx,tsx,mdx}',
+    './src/app/**/*.{js,ts,jsx,tsx,mdx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        brand: {
+          50:  '#fff8f0',
+          100: '#ffecd6',
+          200: '#ffd4a8',
+          300: '#ffb570',
+          400: '#ff8f35',
+          500: '#f97316',
+          600: '#ea6a0a',
+          700: '#c2530a',
+          800: '#9a4210',
+          900: '#7c3810',
+          950: '#431b07',
+        },
+        navy: {
+          50:  '#f4f6fb',
+          100: '#e8ecf5',
+          200: '#ccd5e8',
+          300: '#a1b3d3',
+          400: '#708bb8',
+          500: '#4f6d9e',
+          600: '#3d5483',
+          700: '#32456b',
+          800: '#2c3b59',
+          900: '#1e2a40',
+          950: '#111827',
+        },
+        gray: {
+          50:  '#f9fafb',
+          100: '#f3f4f6',
+          200: '#e5e7eb',
+          300: '#d1d5db',
+          400: '#9ca3af',
+          500: '#6b7280',
+          600: '#4b5563',
+          700: '#374151',
+          800: '#1f2937',
+          900: '#111827',
+        },
+      },
+      fontFamily: {
+        display: ['var(--font-display)', 'Georgia', 'serif'],
+        body:    ['var(--font-body)', 'system-ui', 'sans-serif'],
+        mono:    ['var(--font-mono)', 'monospace'],
+      },
+      boxShadow: {
+        'card':    '0 1px 3px 0 rgba(0,0,0,0.06), 0 1px 2px -1px rgba(0,0,0,0.04)',
+        'card-md': '0 4px 16px -2px rgba(0,0,0,0.08), 0 2px 6px -2px rgba(0,0,0,0.05)',
+        'card-lg': '0 10px 40px -4px rgba(0,0,0,0.10), 0 4px 12px -4px rgba(0,0,0,0.06)',
+        'btn':     '0 1px 3px rgba(249,115,22,0.30)',
+        'btn-lg':  '0 4px 14px rgba(249,115,22,0.40)',
+      },
+      animation: {
+        'fade-up':    'fadeUp 0.55s cubic-bezier(0.16,1,0.3,1) forwards',
+        'fade-in':    'fadeIn 0.4s ease forwards',
+        'slide-down': 'slideDown 0.25s cubic-bezier(0.16,1,0.3,1) forwards',
+      },
+      keyframes: {
+        fadeUp:    { '0%': { opacity:'0', transform:'translateY(20px)' }, '100%': { opacity:'1', transform:'translateY(0)' } },
+        fadeIn:    { '0%': { opacity:'0' }, '100%': { opacity:'1' } },
+        slideDown: { '0%': { opacity:'0', transform:'translateY(-8px)' }, '100%': { opacity:'1', transform:'translateY(0)' } },
+      },
+    },
+  },
+  plugins: [],
+};
