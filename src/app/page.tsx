@@ -34,9 +34,9 @@ export default function HomePage() {
         image="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=1600&q=80"
         fullHeight
         cta={[
-          { label: 'Explore Our Work', href: '/our-work', variant: 'white' },
-          { label: 'Donate Now', href: '/opportunity#donate', variant: 'accent' },
-        ]}
+  { label: 'Explore Our Work', href: '/our-work', variant: 'white' },
+  { label: 'Donate Now', href: '/opportunity#donate', variant: 'primary' },
+]}
       />
 
       <StatsBar />

@@ -50,10 +50,10 @@ export default function OpportunityPage() {
         subtitle="Whether you're a corporation seeking CSR impact, an individual who wants to donate, or a professional who wants to volunteer — there's a meaningful way to contribute."
         image="https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=1600&q=80"
         breadcrumb={[{ label: 'Home', href: '/' }, { label: 'Opportunity' }]}
-        cta={[
-  { label: 'Donate Now', href: '#donate', variant: 'primary' },
-  { label: 'Volunteer With Us', href: '#volunteer', variant: 'white' },
-]}
+       cta={[
+       { label: 'Explore Our Work', href: '/our-work', variant: 'white' },
+      { label: 'Donate Now', href: '/opportunity#donate', variant: 'primary' },
+      ]}
       />
 
       {/* CSR */}
